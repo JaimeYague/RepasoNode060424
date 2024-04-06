@@ -10,7 +10,7 @@ const notFoundHandler = (req, res, next) => {
     res.json({
       status: statusCode,
       message: error.message,
-      stack: process.env.NODE_ENV === "production" ? "" : error.stack,
+      stack: process.env.NODE_ENV === "production" ? "" : error.stack, //un log del error
     });
   };
   
